@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [com.App.Learn_Test]" verbose="0">
+  <test thread-count="5" name="Command line test(failed)" verbose="0">
+    <classes>
+      <class name="com.App.Learn_Test">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="refreshpage"/>
+          <include name="loginTest003"/>
+          <include name="loginTest002"/>
+          <include name="enterUrl"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.App.Learn_Test -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [com.App.Learn_Test] -->
