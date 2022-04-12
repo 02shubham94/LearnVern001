@@ -5,10 +5,11 @@
     <classes>
       <class name="com.App.Learn_Test">
         <methods>
+          <include name="loginTest001"/>
+          <include name="screenshot"/>
           <include name="launchBrowser"/>
           <include name="loginTest003"/>
           <include name="loginTest002"/>
-          <include name="closeBrowser"/>
         </methods>
       </class> <!-- com.App.Learn_Test -->
     </classes>

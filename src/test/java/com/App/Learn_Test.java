@@ -3,9 +3,8 @@ package com.App;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -18,6 +17,8 @@ public class Learn_Test {
 	WebDriver cdriver;
 	DataMembers dm;
 	UtilityClass util;
+	String tcID;
+	
 	@BeforeMethod
 	void launchBrowser() {
 		ChromeBaseClass cbase = new ChromeBaseClass();
@@ -29,16 +30,18 @@ public class Learn_Test {
 	}
 	@Test(enabled=true)
 	void loginTest001() throws IOException {
+		tcID = "test001";
 		dm.clicklogin();
 		dm.clickwithemail();
-		dm.enteremail(util.getCellData(1, 1));
-		dm.enterpass(util.getCellData(1, 2));
+		dm.enteremail(util.getCellData(2, 1));
+		dm.enterpass(util.getCellData(2, 2));
 		dm.clicksubmit();
 		dm.clickname();
 		dm.clicklogout();
 	}
 	@Test(enabled=true)
 	void loginTest002() throws IOException {
+		tcID = "test002";
 		dm.clicklogin();
 		dm.clickwithemail();
 		dm.enteremail(util.getCellData(2, 1));
@@ -49,6 +52,7 @@ public class Learn_Test {
 	}
 	@Test(enabled=true)
 	void loginTest003() throws IOException {
+		tcID = "test003";
 		dm.clicklogin();
 		dm.clickwithemail();
 		dm.enteremail(util.getCellData(3, 1));
@@ -58,7 +62,10 @@ public class Learn_Test {
 		dm.clicklogout();
 	}
 	@AfterMethod
-	void closeBrowser() {
+	void screenshot(ITestResult res) throws IOException {
+		if(ITestResult.FAILURE==res.getStatus()){
+			util.takeScreenshot(tcID, cdriver);
+		}
 		cdriver.quit();
 	}
 }
