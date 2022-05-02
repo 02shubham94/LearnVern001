@@ -15,13 +15,14 @@ import com.PomClass.DataMembers;
 
 public class Learn_Test {
 	WebDriver cdriver;
+	ChromeBaseClass cbase;
 	DataMembers dm;
 	UtilityClass util;
 	String tcID;
 	
 	@BeforeMethod
 	void launchBrowser() {
-		ChromeBaseClass cbase = new ChromeBaseClass();
+		cbase = new ChromeBaseClass();
 		cdriver = cbase.cdriverinit();
 		dm = new DataMembers(cdriver);
 		util = new UtilityClass();
@@ -33,8 +34,8 @@ public class Learn_Test {
 		tcID = "test001";
 		dm.clicklogin();
 		dm.clickwithemail();
-		dm.enteremail(util.getCellData(2, 1));
-		dm.enterpass(util.getCellData(2, 2));
+		dm.enteremail(util.getCellData(1, 1));
+		dm.enterpass(util.getCellData(1, 2));
 		dm.clicksubmit();
 		dm.clickname();
 		dm.clicklogout();
