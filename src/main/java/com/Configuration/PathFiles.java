@@ -10,6 +10,6 @@ public class PathFiles {
 	public static String facebookUrl = "https://www.facebook.com";
 	public static String facebookSignupUrl = "https://www.facebook.com/signup";
 	public static String instagramUrl = "https://www.instagram.com";
-	public static String ScreenshotPathpath = "D:\\Syllabus\\Automation\\Automation Testing\\Screenshots\\LearnVern ";
-	public static String Excelpath = "C:\\Users\\HP\\eclipse-workspace0101\\learnVernProject\\src\\test\\resources\\testData\\DataBase.xlsx";
+	public static String ScreenshotPathpath = "C:\\Users\\HP\\eclipse-workspace0101\\learnVernProject\\target\\screenshots\\Snap";
+	public static String Excelpath = "C:\\Users\\HP\\eclipse-workspace0101\\zerodha\\src\\test\\resources\\testData\\DataBase.xlsx";
 }

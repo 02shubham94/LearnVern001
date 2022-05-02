@@ -8,8 +8,6 @@
           <include name="loginTest001"/>
           <include name="screenshot"/>
           <include name="launchBrowser"/>
-          <include name="loginTest003"/>
-          <include name="loginTest002"/>
         </methods>
       </class> <!-- com.App.Learn_Test -->
     </classes>

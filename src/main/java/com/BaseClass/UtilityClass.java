@@ -44,6 +44,23 @@ public class UtilityClass {
 		}
 		return data;
 	}
+	public String zerodhadata(int rownum, int celnum) throws IOException {
+		stream = new FileInputStream(path);
+		book = WorkbookFactory.create(stream);
+		sheet = book.getSheet("Zerodha");
+		row = sheet.getRow(rownum);
+		cell = row.getCell(celnum);
+		
+		DataFormatter format = new DataFormatter();
+		String data;
+		try {
+			data = format.formatCellValue(cell);
+		}catch(Exception e){
+			data = "";
+		}
+		return data;
+	}
+	
 	public void takeScreenshot(String tcID, WebDriver cdriver) throws IOException {
 		Date d = new Date();
 		String date = d.toString();
